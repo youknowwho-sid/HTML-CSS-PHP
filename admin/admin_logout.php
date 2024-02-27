@@ -1,0 +1,10 @@
+<?php
+session_start();
+if(!isset($_SESSION['adminlogin'])){
+	header("Location:index.php");
+	die();
+}
+session_unset();
+session_destroy();
+header("Location:index.php");
+?>
